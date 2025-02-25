@@ -22,6 +22,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,100,100italic,300italic,400,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
     <style>
+        /*        carrusel*/
         .carousel {
             position: relative;
             width: 100%;
@@ -101,6 +102,55 @@
 
         .active-dot {
             background: #FF7500;
+        }
+
+        /*acordeon*/
+        .acordeon {
+            
+            margin: auto;
+/*
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+*/
+        }
+
+        .acordeon-item {
+/*            border-bottom: 1px solid #ddd;*/
+        }
+
+        .acordeon-header {
+            padding: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .acordeon-header:hover {
+            background-color: #f1f1f1;
+        }
+
+        .acordeon-content {
+            padding: 0 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .acordeon-item.active .acordeon-content {
+            max-height: 150px;
+            padding: 15px;
+        }
+
+        .icon {
+            transition: transform 0.3s ease;
+        }
+
+        .acordeon-item.active .icon {
+            transform: rotate(90deg);
         }
 
     </style>
@@ -187,20 +237,20 @@
             </div>
         </div>
     </div>
-    <div class="container margin-top-40">
+    <div class="container margin-top-60">
         <div class="row">
-            <div class="col-md-12 text-center">
+            <div class="col-md-12 text-center margin-bottom-20">
                 <h1>También te puede interesar</h1>
             </div>
         </div>
         <!--BANNERS-->
-        <div class="row margin-top-20">
-            <div class="col-md-7">
+        <div class="row">
+            <div class="col-md-7  margin-top-20">
                 <div class="carousel">
                     <div class="carousel-container">
                         <div class="slide active">
                             <img src="images/samsung.png" alt="Chip 1TB evo SAMSUNG">
-<!--
+                            <!--
                             <div class="info">
                                 <p>Electrónica</p>
                                 <h2>Chip 1TB evo SAMSUNG</h2>
@@ -210,15 +260,15 @@
                         </div>
                         <div class="slide">
                             <img src="images/2.png" alt="Otro producto">
-                            
+
                         </div>
                         <div class="slide">
                             <img src="images/3.png" alt="Otro producto">
-                            
+
                         </div>
                         <div class="slide">
                             <img src="images/4.png" alt="Otro producto">
-                           
+
                         </div>
                     </div>
                     <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
@@ -233,41 +283,15 @@
 
 
             </div>
-            <div class="col-md-5 hidden-xs">
-                <a href="productos.html"><img src="images/casco.png"></a>
+            <div class="col-md-5">
+                <a href="productos.html"><img src="images/casco.png" class="margin-top-20"></a>
 
                 <a href="productos.html"><img src="images/iphone.png" class="margin-top-20"></a>
             </div>
         </div>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid" style="background: #F3EEFC">
 
-        <div class="row margin-top-20 bg-naranja padding-bot-20 padding-top-20">
-            <div class="col-md-4">
-                <img src="images/slides/mini1.png">
-                <div class="box-banner">
-                    <p class="margin-bottom-5"><b>Lorem ipsum amet lorem</b></p>
-                    <h2 style="color: #fff;font-weight: 600;text-transform: uppercase">Lorem ipsum, <br> amet ipsum lorem</h2>
-                    <a class="button" href="productos.html">Comprar</a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <img src="images/slides/mini2.png">
-                <div class="box-banner">
-                    <p class="margin-bottom-5"><b>Lorem ipsum amet lorem</b></p>
-                    <h2 style="color: #fff;font-weight: 600;text-transform: uppercase">Lorem ipsum, <br> amet ipsum lorem</h2>
-                    <a class="button" href="productos.html">Comprar</a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <img src="images/slides/mini3.png">
-                <div class="box-banner">
-                    <p class="margin-bottom-5"><b>Lorem ipsum amet lorem</b></p>
-                    <h2 style="color: #fff;font-weight: 600;text-transform: uppercase">Lorem ipsum, <br> amet ipsum lorem</h2>
-                    <a class="button" href="productos.html">Comprar</a>
-                </div>
-            </div>
-        </div>
         <!--Productos TOP-->
         <div class="row margin-top-40">
             <div class="col-md-12">
@@ -379,28 +403,88 @@
             </div>
         </div>
     </div>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-12 margin-top-60 margin-bottom-40">
+                <h3 class="fnt-600">Beneficios de tener puntos con tus tarjetas CPN</h3>
+            </div>
+            <div class="col-md-4">
+                <img src="images/cellphone.png" class="margin-bottom-25">
+                <p class="fnt-600 margin-bottom-5">Elige tu producto y redime</p>
+                <p class="gris margin-bottom-40">Redime tus puntos desde tu computadora <br> o celular</p>
+            </div>
+            <div class="col-md-4">
+                <img src="images/shopping-outline.png" class="margin-bottom-25">
+                <p class="fnt-600 margin-bottom-5">Beneficios especiales</p>
+                <p class="gris margin-bottom-40">Por ser parte de nuestra familia CPN tienes descuentos y beneficios exclusivos en productos y establecimientos</p>
+            </div>
+            <div class="col-md-4">
+                <img src="images/airplane.png" class="margin-bottom-25">
+                <p class="fnt-600 margin-bottom-5">Viaja con tus puntos</p>
+                <p class="gris margin-bottom-40">Elige tu próximo destino, cotiza y redime tu <br> ticket aéreo.</p>
+            </div>
+        </div>
+    </div>
     <footer class="footer">
         <div class="footer-top">
             <div class="container">
-                <div class="row text-center">
-                    <div class="col-md-12 margin-top-20 margin-bottom-20">
-                        <h3 style="color: #fff">CÓMO FUNCIONA COMPRAR EN CPN</h3>
+                <div class="row margin-bottom-60">
+
+                    <div class="col-md-4 margin-top-60">
+                        <h3 class="fnt-600">Conoce más sobre tus <br> puntos</h3>
                     </div>
-                    <div class="col-md-4">
-                        <img src="images/foot1.png">
-                        <p class="margin-bottom-0" style="font-size: 16px;">Elige tu producto y redime</p>
-                        <p style="font-size: 13px;">Redime tus puntos desde tu computadora o desde tu celular</p>
+                    <div class="col-md-8 margin-top-60">
+                        <div class="acordeon">
+                            <div class="acordeon-item">
+                                <div class="acordeon-header">
+                                    Pregunta frecuente 1
+                                    <span class="icon"><img src="images/flecha.png"></span>
+                                </div>
+                                <div class="acordeon-content">
+                                   Redime tus puntos desde tu computadora o desde tu celular. Redime tus puntos desde tu computadora o desde tu celular. Redime tus puntos desde tu computadora o desde tu celular. Redime tus puntos desde tu computadora o desde tu celular.
+                                </div>
+                            </div>
+
+                            <div class="acordeon-item">
+                                <div class="acordeon-header">
+                                    Pregunta frecuente 2
+                                    <span class="icon"><img src="images/flecha.png"></span>
+                                </div>
+                                <div class="acordeon-content">
+                                    Redime tus puntos desde tu computadora o desde tu celular. Redime tus puntos desde tu computadora o desde tu celular. Redime tus puntos desde tu computadora o desde tu celular. Redime tus puntos desde tu computadora o desde tu celular.
+                                </div>
+                            </div>
+
+                            <div class="acordeon-item">
+                                <div class="acordeon-header">
+                                    Pregunta frecuente 3
+                                    <span class="icon"><img src="images/flecha.png"></span>
+                                </div>
+                                <div class="acordeon-content">
+                                   Redime tus puntos desde tu computadora o desde tu celular. Redime tus puntos desde tu computadora o desde tu celular. Redime tus puntos desde tu computadora o desde tu celular. Redime tus puntos desde tu computadora o desde tu celular.
+                                </div>
+                            </div>
+                            <div class="acordeon-item">
+                                <div class="acordeon-header">
+                                    Pregunta frecuente 4
+                                    <span class="icon"><img src="images/flecha.png"></span>
+                                </div>
+                                <div class="acordeon-content">
+                                   Redime tus puntos desde tu computadora o desde tu celular. Redime tus puntos desde tu computadora o desde tu celular. Redime tus puntos desde tu computadora o desde tu celular. Redime tus puntos desde tu computadora o desde tu celular.
+                                </div>
+                            </div>
+                            <div class="acordeon-item">
+                                <div class="acordeon-header">
+                                    Pregunta frecuente 5
+                                    <span class="icon"><img src="images/flecha.png"></span>
+                                </div>
+                                <div class="acordeon-content">
+                                   Redime tus puntos desde tu computadora o desde tu celular. Redime tus puntos desde tu computadora o desde tu celular. Redime tus puntos desde tu computadora o desde tu celular. Redime tus puntos desde tu computadora o desde tu celular.
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <img src="images/foot2.png">
-                        <p class="margin-bottom-0" style="font-size: 16px;">Elige el beneficio que deseas obtener</p>
-                        <p style="font-size: 13px;">Solo por ser parte de nuestra familia CPN tienes descuentos y beneficios exclusivos</p>
-                    </div>
-                    <div class="col-md-4">
-                        <img src="images/foot3.png">
-                        <p class="margin-bottom-0" style="font-size: 16px;">Disfruta tu producto</p>
-                        <p style="font-size: 13px;">Disfruta tu compra CPN</p>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -454,7 +538,7 @@
             </a>
         </form>
     </div>
-
+    <!--codigo para carrusel-->
     <script>
         let index = 0;
 
@@ -484,6 +568,18 @@
         function closeForm() {
             document.getElementById("myForm").style.display = "none";
         }
+
+    </script>
+    <!--    codigo para acordeon-->
+    <script>
+        const acordeonHeaders = document.querySelectorAll('.acordeon-header');
+
+        acordeonHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                item.classList.toggle('active');
+            });
+        });
 
     </script>
     <!--	MODALS-->
