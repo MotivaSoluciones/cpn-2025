@@ -20,6 +20,90 @@
 
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400italic,400,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,100,100italic,300italic,400,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <style>
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .carousel-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            position: relative;
+        }
+
+        .slide img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .info {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+        }
+
+        button {
+            background: white;
+            color: black;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            top: 45%;
+            transform: translateY(-50%);
+            background: transparent;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .prev {
+            left: 15px;
+        }
+
+        .next {
+            right: 15px;
+        }
+
+        .dots {
+            text-align: center;
+            width: 100%;
+            margin-top: 10px;
+            position: absolute;
+            bottom: 25px;
+        }
+
+        .dot {
+            height: 10px;
+            width: 10px;
+            background: #fff;
+            display: inline-block;
+            border-radius: 50%;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .active-dot {
+            background: #FF7500;
+        }
+
+    </style>
 </head>
 
 <body class="home">
@@ -40,92 +124,124 @@
                         </div>
                         <ul class="menu-resp fnt-600">
                             <li class="">
-                                <a href="productos.html">Productos</a>
+                                <a class="cart-link btn-blanco" href="carrito.html"><span style="font-size: 20px;font-weight: 600" class="icon pe-7s-cart"></span></a>
                             </li>
                             <li class="">
-                                <a href="beneficios.html">Beneficios</a>
+                                <a class="cart-link btn-blanco" href="favoritos.html"><span style="font-size: 20px;font-weight: 600" class="icon pe-7s-user"></span></a>
                             </li>
-                            <li class="">
-                                <a href="nueva.html" class="unete">Únete</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-12 menu-wapper">
-                        <!--
-                        <div class="top-header">
-                            <span class="mobile-navigation"><i class="fa fa-bars"></i></span>
-                                                        <p class="txt-desk user-name">Hola @Nombre</p>
-
-                        </div>
--->
-                        <a href="index.html" class="hidden-xs"><img src="images/logos/logo.png" style="margin: 15px" alt=""></a>
-                        <ul class="boutique-nav main-menu clone-main-menu fnt-600" style="float: right">
-
                             <li class="">
                                 <a href="nueva.html">Regístrate</a>
                             </li>
                             <li class="">
-                                <a href="login.html" class="unete">Iniciar sesión</a>
+                                <a href="nueva.html" class="unete">Iniciar sesión</a>
                             </li>
-
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <div class="container-fluid">
-        <div class="row hero">
-            <div class="col-md-12 margin-top-20 margin-bottom-25 box-cart-login">
-                <a class="cart-link btn-blanco" href="productos.html">Productos</a>
-                <a class="cart-link btn-blanco" href="beneficios.html">Beneficios</a>
-                <a class="cart-link btn-blanco" href="cotiza.html">Viajes</a>
-                <a class="cart-link btn-blanco" href="carrito.html"><span style="font-size: 20px;font-weight: 600" class="icon pe-7s-cart"></span></a>
-            </div>
-            <div class="col-md-12 text-center margin-top-20 margin-bottom-20">
-                <p class="fnt-600 hidden-xs hoy">¿Qué necesitas hoy?</p>
-            </div>
-            <div class="col-md-6 col-md-offset-3 text-center margin-top-20">
-
-                <div class="box-control margin-top-20">
-                    <form class="box-search">
-                        <div class="inner">
-                            <input type="text" class="search" placeholder="Ingresa el producto, beneficio o viaje que buscas">
-
-                            <button class="button-search hidden-xs">Buscar ahora</button>
-                        </div>
-                    </form>
+    <div class="container-fluid hero">
+        <div class="container margin-top-20">
+            <div class="row ">
+                <div class="col-md-3 hidden-xs">
+                    <div class="logo">
+                        <a href="index.html"><img src="images/logos/logo.png" alt=""></a>
+                    </div>
                 </div>
+                <div class="col-md-4 text-center margin-top-30">
+                    <a class="cart-link btn-blanco" href="productos.html">Productos</a>
+                    <a class="cart-link btn-blanco" href="beneficios.html">Beneficios</a>
+                    <a class="cart-link btn-blanco" href="cotiza.html">Viajes</a>
+                </div>
+                <div class="col-md-5 box-cart-login hidden-xs margin-top-30">
+                    <a class="cart-link btn-blanco" href="carrito.html"><span style="font-size: 20px;font-weight: 600" class="icon pe-7s-cart"></span></a>
+                    <a href="nueva.html" class="btn-blanco">Regístrate</a>
+                    <a href="login.html" class="unete btn-blanco">Iniciar sesión</a>
 
-            </div>
-            <div class="col-md-3 text-center margin-top-20 ">
+                </div>
+                <div class="col-md-12 text-center margin-top-110 ">
+                    <p class="hidden-xs hoy">¿Qué necesitas hoy?</p>
+                    <h3 class="fnt-600 visible-xs">¿Qué necesitas hoy?</h3>
+                </div>
+                <div class="col-md-6 col-md-offset-3 text-center margin-top-20">
 
-               <button class="button-search visible-xs">Buscar ahora</button>
+                    <div class="box-control margin-top-20">
+                        <form class="box-search">
+                            <div class="inner">
+                                <input type="text" class="search" placeholder="Ingresa el producto, beneficio o viaje que buscas">
 
-            </div>
-            <div class="col-md-12 margin-top-230 ">
+                                <button class="button-search hidden-xs">Buscar ahora</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="col-md-3 text-center margin-top-20 ">
+
+                    <button class="button-search visible-xs">Buscar ahora</button>
+
+                </div>
+                <div class="col-md-12 margin-top-230 ">
+                </div>
             </div>
         </div>
     </div>
-
-    <div class="container-fluid">
-        <!--BANNERS-->
-        <div class="row margin-top-20">
-            <div class="col-md-8">
-                <img src="images/slides/mini4.png" style="">
-                <div class="box-banner">
-                    <p class="margin-bottom-5"><b>Lorem ipsum amet lorem</b></p>
-                    <h2 style="color: #fff;font-weight: 600;text-transform: uppercase">Lorem ipsum, <br> amet ipsum lorem</h2>
-                    <a class="button" href="productos.html">Comprar</a>
-                </div>
-
-            </div>
-            <div class="col-md-4 hidden-xs">
-                <a href="productos.html"><img src="images/slides/mini5.png"></a>
-
-                <a href="productos.html"><img src="images/slides/mini6.png" class="margin-top-20"></a>
+    <div class="container margin-top-40">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>También te puede interesar</h1>
             </div>
         </div>
+        <!--BANNERS-->
+        <div class="row margin-top-20">
+            <div class="col-md-7">
+                <div class="carousel">
+                    <div class="carousel-container">
+                        <div class="slide active">
+                            <img src="images/samsung.png" alt="Chip 1TB evo SAMSUNG">
+<!--
+                            <div class="info">
+                                <p>Electrónica</p>
+                                <h2>Chip 1TB evo SAMSUNG</h2>
+                                <button>Comprar ahora</button>
+                            </div>
+-->
+                        </div>
+                        <div class="slide">
+                            <img src="images/2.png" alt="Otro producto">
+                            
+                        </div>
+                        <div class="slide">
+                            <img src="images/3.png" alt="Otro producto">
+                            
+                        </div>
+                        <div class="slide">
+                            <img src="images/4.png" alt="Otro producto">
+                           
+                        </div>
+                    </div>
+                    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                    <div class="dots">
+                        <span class="dot active-dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-md-5 hidden-xs">
+                <a href="productos.html"><img src="images/casco.png"></a>
+
+                <a href="productos.html"><img src="images/iphone.png" class="margin-top-20"></a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+
         <div class="row margin-top-20 bg-naranja padding-bot-20 padding-top-20">
             <div class="col-md-4">
                 <img src="images/slides/mini1.png">
@@ -340,6 +456,27 @@
     </div>
 
     <script>
+        let index = 0;
+
+        function moveSlide(step) {
+            const slides = document.querySelectorAll(".slide");
+            index = (index + step + slides.length) % slides.length;
+            document.querySelector(".carousel-container").style.transform = `translateX(${-index * 100}%)`;
+            updateDots();
+        }
+
+        function currentSlide(n) {
+            index = n - 1;
+            document.querySelector(".carousel-container").style.transform = `translateX(${-index * 100}%)`;
+            updateDots();
+        }
+
+        function updateDots() {
+            document.querySelectorAll(".dot").forEach((dot, i) => {
+                dot.classList.toggle("active-dot", i === index);
+            });
+        }
+
         function openForm() {
             document.getElementById("myForm").style.display = "block";
         }
