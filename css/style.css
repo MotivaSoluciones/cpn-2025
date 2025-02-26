@@ -2858,7 +2858,7 @@ PRODUCT
     margin-bottom: 20px;
     /*    NUEVA VISTA*/
     border: 1px solid #BABFC480;
-    padding: 15px;
+    padding: 16px;
     border-radius: 7px;
     box-shadow: 0px 4px 4px 0px #00000040;
     background: #fff;
@@ -2872,6 +2872,7 @@ PRODUCT
     background: #F5F5F5;
     border-radius: 8px;
     padding: 15px;
+    margin-top: 16px;
 }
 
 .product-item .product-name {
@@ -5586,7 +5587,7 @@ FOOTER
 /* tab-product */
 
 .tab-product .nav-tab {
-    padding: 0;
+    
     margin: 0;
     display: table;
     margin: 0 auto;
@@ -5598,12 +5599,12 @@ FOOTER
     display: inline-block;
     padding: 0 15px;
     list-style: none;
-    margin-bottom: 15px;
+    margin: 15px 0;
 }
 
 .tab-product .nav-tab li a {
     font-size: 13px;
-    text-transform: uppercase;
+ 
     color: #686868;
     position: relative;
 }
@@ -10266,7 +10267,7 @@ li.info-pts span {
     font-weight: 600;
     font-size: 0px;
 
-   
+
     width: 40px;
     height: 40px;
     text-align: center;
@@ -10282,7 +10283,7 @@ li.info-pts span {
     display: block !important;
     font-weight: 600;
     font-size: 0px;
-    
+
     width: 40px;
     height: 40px;
     text-align: center;
@@ -10460,4 +10461,136 @@ li.info-pts span {
 
 .morado {
     color: #5A22AD !important;
+}
+
+/*ACORDEON FAQ FOOTER*/
+.acordeon {
+
+    margin: auto;
+    /*
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+*/
+}
+
+.acordeon-item {
+    /*            border-bottom: 1px solid #ddd;*/
+}
+
+.acordeon-header {
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.acordeon-header:hover {
+    background-color: #f1f1f1;
+}
+
+.acordeon-content {
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.acordeon-item.active .acordeon-content {
+    max-height: 150px;
+    padding: 15px;
+}
+
+.icon {
+    transition: transform 0.3s ease;
+}
+
+.acordeon-item.active .icon {
+    transform: rotate(90deg);
+}
+
+/********CARRUSEL*******/
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+}
+
+button {
+    background: white;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+.dots {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 25px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background: #fff;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.active-dot {
+    background: #FF7500;
 }
