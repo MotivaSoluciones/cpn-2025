@@ -1763,13 +1763,14 @@ blockquote.style2:after {
 
 .header.style3 .main-menu > li > a {
     padding: 10px 0;
-    font-size: 18px;
+    font-size: 16px;
 
 }
 
 .header.style3 .main-menu > li > a:hover,
 .header.style3 .main-menu > li.active > a {
-    color: #FF7500;
+    font-size: 18px;
+    color: #333;
     font-weight: 600;
 }
 
@@ -1780,7 +1781,7 @@ blockquote.style2:after {
 
 .header.style3 .main-menu > li {
     padding: 0 20px;
-    margin: 23px 0;
+    margin: 10px 0;
 }
 
 .header.style3 .main-menu > li:first-child {
@@ -5587,7 +5588,7 @@ FOOTER
 /* tab-product */
 
 .tab-product .nav-tab {
-    
+
     margin: 0;
     display: table;
     margin: 0 auto;
@@ -5604,7 +5605,7 @@ FOOTER
 
 .tab-product .nav-tab li a {
     font-size: 13px;
- 
+
     color: #686868;
     position: relative;
 }
@@ -10586,4 +10587,93 @@ button {
 
 .active-dot {
     background: #FF7500;
+}
+
+/*CATEGORIAS*/
+
+.menu-categorias {
+    display: flex !important;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+    overflow-x: auto;
+    /* Habilita el scroll horizontal */
+    scroll-snap-type: x mandatory;
+    /* Desplazamiento suave */
+}
+
+.categoria {
+    flex: 0 0 auto;
+    /* No cambia de tamaño */
+    width: 100px;
+    height: 100px;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    scroll-snap-align: center;
+    /* Centra las categorías */
+}
+
+.menu-categorias .active,
+.categoria:hover {
+    border-color: #FF4500;
+    transform: scale(1.1);
+}
+
+.categoria img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.categoria p {
+    font-size: 12px;
+    color: #333;
+    margin: 0;
+    line-height: 15px;
+}
+
+/* Estilo del scroll */
+.menu-categorias::-webkit-scrollbar {
+    height: 0px;
+}
+
+.menu-categorias::-webkit-scrollbar-thumb {
+    background-color: purple;
+    border-radius: 10px;
+}
+
+.menu-categorias::-webkit-scrollbar-track {
+    background: #ddd;
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu-categorias {
+        flex-wrap: nowrap;
+        padding: 10px;
+        justify-content: start;
+    }
+
+    .categoria {
+        width: 100px;
+        height: 100px;
+    }
+
+    .categoria img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .categoria p {
+        font-size: 12px;
+    }
 }
