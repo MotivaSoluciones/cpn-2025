@@ -9694,7 +9694,7 @@ RESPONSIVE
     height: 24px;
     line-height: 24px;
     position: absolute;
-    left: 60px;
+    right: 12px;
     top: 0;
     transform: translate(25%, -25%);
     width: 24px;
@@ -10013,10 +10013,10 @@ li.info-pts {
 }
 
 .box-codigo {
-    background: #FF7500;
+    background: #F3EEFC;
     border-radius: 25px;
     padding: 10px 25px;
-    color: #fff;
+    color: #5A22AD;
     display: inline-block;
 }
 
