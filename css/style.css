@@ -242,7 +242,7 @@ input[type="submit"] {
     transition: all 0.3s ease 0s;
     background: transparent;
     position: relative;
-    background-color: #FF7500;
+    background-color: #5A22AD;
 
     border: none;
     border-radius: 7px;
@@ -251,8 +251,9 @@ input[type="submit"] {
 
 .button:hover,
 input[type="submit"]:hover {
-    background-color: #FF7500;
-    color: #fff;
+    background-color: #fff;
+    color: #5A22AD;
+    border: 1px solid #5A22AD;
 }
 
 input[type="submit"]:before {
@@ -9786,8 +9787,8 @@ RESPONSIVE
 }
 
 .style-11 {
-    background: #e5e5e5;
-    color: #545454;
+    background: #F5F5F5;
+    color: #333;
 }
 
 .header.ontop li.info-pts,
@@ -10198,7 +10199,7 @@ li.info-pts span {
     }
 }
 
-/*---7NOV2023---- */
+/*---7NOV2025---- */
 
 @media(max-width:280px) {
     .correo {
