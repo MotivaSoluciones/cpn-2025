@@ -2878,7 +2878,7 @@ PRODUCT
 }
 
 .product-item .product-name {
-    margin-bottom: 24px;
+    margin-bottom: 15px;
 
     height: 48px;
     line-height: 23px;
@@ -2904,7 +2904,7 @@ PRODUCT
     display: block;
     font-family: 'Montserrat-SemiBold';
     font-size: 24px;
-    /*	margin-bottom: 5px;*/
+    	margin-bottom:15px;
 }
 
 .product-item .price span {
@@ -9677,8 +9677,8 @@ RESPONSIVE
 .marca {
     font-size: 14px;
     color: #676767;
-    margin: 24px 0;
-    height: 70px;
+    margin: 5px 0;
+    height:60px;
     line-height: 18px;
 }
 
