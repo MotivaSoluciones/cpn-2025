@@ -6397,8 +6397,6 @@ FOOTER
     font-size: 18px;
     text-decoration: none;
     display: inline-block;
-
-    color: #FF7500;
 }
 
 .product-details-right .price ins {
@@ -6425,7 +6423,7 @@ FOOTER
     clear: left;
     padding: 16px 33px;
     font-size: 14px;
-    background: #FF7500;
+    background: #5A22AD;
 }
 
 .product-details-right .quantity {
