@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel con Contenido Dinámico</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .carousel-container {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+
+        .carousel {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+            padding: 10px 0;
+        }
+
+        .carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .category {
+            flex: 0 0 auto;
+            width: 100px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .category .icon {
+            width: 50px;
+            height: 50px;
+            background-color: #fbeee0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin: 0 auto;
+            transition: 0.3s;
+        }
+
+        .category span {
+            display: block;
+            margin-top: 5px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .category.active .icon {
+            background-color: #ff8c42;
+            color: white;
+        }
+
+        .category.active span {
+            font-weight: bold;
+            color: black;
+            position: relative;
+        }
+
+        .category.active span::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: #ff8c42;
+            margin-top: 3px;
+            border-radius: 2px;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.1);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 50%;
+        }
+
+        .arrow-left {
+            left: 5px;
+        }
+
+        .arrow-right {
+            right: 5px;
+        }
+
+        .content {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: #f9f9f9;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Selecciona una Categoría</h2>
+
+        <div class="carousel-container">
+            <button class="arrow arrow-left">&#10094;</button>
+            <div class="carousel" id="carousel">
+                <div class="category active" onclick="selectCategory(this, 'contenido1')">
+                    <div class="icon">🧍</div>
+                    <span>Categoría 1</span>
+                </div>
+                <div class="category" onclick="selectCategory(this, 'contenido2')">
+                    <div class="icon">🚀</div>
+                    <span>Categoría 2</span>
+                </div>
+                <div class="category" onclick="selectCategory(this, 'contenido3')">
+                    <div class="icon">🎨</div>
+                    <span>Categoría 3</span>
+                </div>
+                <div class="category" onclick="selectCategory(this, 'contenido4')">
+                    <div class="icon">📚</div>
+                    <span>Categoría 4</span>
+                </div>
+                <div class="category" onclick="selectCategory(this, 'contenido5')">
+                    <div class="icon">⚽</div>
+                    <span>Categoría 5</span>
+                </div>
+            </div>
+            <button class="arrow arrow-right">&#10095;</button>
+        </div>
+
+        <div class="content" id="content">
+            <h3>Contenido de Categoría 1</h3>
+            <p>Esta es la información relacionada con la Categoría 1.</p>
+        </div>
+    </div>
+
+    <script>
+        const carousel = document.getElementById("carousel");
+        const leftArrow = document.querySelector(".arrow-left");
+        const rightArrow = document.querySelector(".arrow-right");
+        const content = document.getElementById("content");
+
+        const categoryContent = {
+            contenido1: "<h3>Contenido de Categoría 1</h3><p>Esta es la información relacionada con la Categoría 1.</p>",
+            contenido2: "<h3>Contenido de Categoría 2</h3><p>Aquí puedes ver datos exclusivos de la Categoría 2.</p>",
+            contenido3: "<h3>Contenido de Categoría 3</h3><p>Explora la información especial de la Categoría 3.</p>",
+            contenido4: "<h3>Contenido de Categoría 4</h3><p>Todo lo que necesitas saber sobre la Categoría 4.</p>",
+            contenido5: "<h3>Contenido de Categoría 5</h3><p>Información destacada sobre la Categoría 5.</p>",
+        };
+
+        leftArrow.addEventListener("click", () => {
+            carousel.scrollBy({
+                left: -150,
+                behavior: "smooth"
+            });
+        });
+
+        rightArrow.addEventListener("click", () => {
+            carousel.scrollBy({
+                left: 150,
+                behavior: "smooth"
+            });
+        });
+
+        function selectCategory(element, contentKey) {
+            document.querySelectorAll(".category").forEach(cat => cat.classList.remove("active"));
+            element.classList.add("active");
+            content.innerHTML = categoryContent[contentKey];
+        }
+
+    </script>
+
+</body>
+
+</html>
