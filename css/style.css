@@ -10732,7 +10732,7 @@ button {
 }
 
 .category.active .icon {
-    background-color: #ff8c42;
+/*    background-color: #ff8c42;*/
     color: white;
 }
 
