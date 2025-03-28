@@ -94,7 +94,7 @@
         </div>
     </header>
     <img src="images/slides/banner-productos.png">
-<!--
+    <!--
     <div class="container-fluid">
         <div class="row bg-naranja">
             <div class="col-md-12 text-center margin-bottom-20">
@@ -187,7 +187,7 @@
                 </ul>
                 <button class="arrow arrow-right"><img src="images/arrow-right.png"></button>
             </div>
-            
+
             <div class="tab-content ">
                 <div class="tab-container">
                     <div id="tab-1" class="tab-panel active">
@@ -204,7 +204,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
                         <div class="row">
                             <div class="col-md-3">
@@ -340,6 +340,30 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-md-3">
+                                <div class="product-item style3 ">
+                                    <div class="product-inner">
+                                        <div class="product-thumb has-back-image">
+                                            <a href="detail-prod.html"><img src="images/products/1.jpg" alt=""></a>
+
+                                            <div class="gorup-button">
+                                                <a data-toggle="modal" data-target="#previa" class="quick-view"><i class="fa fa-search"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-info">
+                                            <p class="product-name"><a href="detail-prod.html">Lorem ipsum dolor sit amet dolor sit amet</a></p>
+                                            <p class="price">500 <span>puntos</span></p>
+                                            <p class="marca">Lorem ipsum dolor sit amet ipsum dolor sitsitsitsit dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor </p>
+                                            <a class="button add_to_cart_button" data-toggle="modal" data-target="#carrito">Añadir al carrito</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row margin-top-20 margin-bottom-40">
+                            <div class="col-md-12 text-center">
+                                <img src="images/Pagination.png">
+                            </div>
                         </div>
                     </div>
                     <div id="tab-2" class="tab-panel">
@@ -356,7 +380,7 @@
                                     </div>
                                 </div>
                             </div>
-                           
+
                         </div>
                         <div class="row">
                             <div class="col-md-3">
@@ -418,6 +442,7 @@
                             </div>
 
                         </div>
+                        
                     </div>
                     <div id="tab-3" class="tab-panel">
                         <div class="row">
@@ -433,7 +458,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
                         <div class="row">
                             <div class="col-md-3">
@@ -471,7 +496,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
                         <div class="row">
                             <div class="col-md-3">
@@ -509,7 +534,7 @@
                                     </div>
                                 </div>
                             </div>
-<!--
+                            <!--
                             <div class="col-md-3 col-xs-12 margin-bottom-20">
                                 <select name="" class="normal" id="">
                                     <option value="" class="normal">Ordenar de A - Z</option>
@@ -571,6 +596,7 @@
                 <div class="row margin-bottom-60">
                     <div class="col-md-4 margin-top-60">
                         <h3 class="fnt-600">Conoce más sobre tus <br> puntos</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                     </div>
                     <div class="col-md-8 margin-top-60">
                         <div class="acordeon">
@@ -698,7 +724,18 @@
         }
 
     </script>
+    <!--    codigo para acordeon-->
+    <script>
+        const acordeonHeaders = document.querySelectorAll('.acordeon-header');
 
+        acordeonHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+
+    </script>
 
     <!--	MODALS-->
     <div class="modal fade" id="carrito" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
