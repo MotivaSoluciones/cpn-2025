@@ -1770,9 +1770,9 @@ blockquote.style2:after {
 
 .header.style3 .main-menu > li > a:hover,
 .header.style3 .main-menu > li.active > a {
-    font-size: 18px;
+    
     color: #333;
-    font-weight: 600;
+    
 }
 
 
@@ -10788,3 +10788,7 @@ button {
     background: #f9f9f9;
 }
 */
+.icono-link 
+{
+    padding: 0 6px!important;
+}
