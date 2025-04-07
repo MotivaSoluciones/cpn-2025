@@ -10792,3 +10792,6 @@ button {
 {
     padding: 0 6px!important;
 }
+.main-menu > li .box-puntos{
+    display: none;
+}
