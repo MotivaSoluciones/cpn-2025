@@ -979,7 +979,11 @@ blockquote.style2:after {
     bottom: -10px;
     z-index: 10;
 }
-
+.main-menu  .active a {
+   
+    border-bottom: 2px solid #fc7501;
+   
+}
 .main-menu > li > a {
     padding: 13px 0;
 
@@ -10326,8 +10330,7 @@ li.info-pts span {
 }
 
 .btn-blanco:hover {
-    color: #333;
-    font-size: 18px;
+   color: #333;
 }
 
 .star {
